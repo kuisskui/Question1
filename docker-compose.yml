@@ -98,6 +98,25 @@ services:
       - rabbit
     restart: "no"
 
+  advertise:
+    build:
+      context: ./advertise
+      dockerfile: Dockerfile-dev
+    container_name: advertise
+    volumes:
+      - /tmp/video-upload/npm-cache:/root/.npm:z
+      - ./video-upload/src:/usr/src/app/src:z
+      - ./video-upload/uploads:/usr/src/app/uploads:z
+    ports:
+      - "4105:80"
+    environment:
+      - PORT=80
+      - RABBIT=amqp://test:test@rabbit:5672
+      - NODE_ENV=development
+    depends_on:
+      - rabbit
+    restart: "no"
+
   history:
     image: history
     build: 

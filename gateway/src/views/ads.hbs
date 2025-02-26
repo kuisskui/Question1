@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixTube: Play Video</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        #content {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="flex flex-col">
+    <div class="border-b-2 bg-gray-100">
+        <div class="nav flex flex-row items-center mt-1 p-2">
+            <button onclick="showContent()">Click Me</button>
+        </div>
+    </div>
+    <div id="content">
+        <p>Shopee</p>
+        <img src="https://www.leceipt.com/wp-content/uploads/2021/11/shopee-1.png" alt="Shopee Logo">
+        <a href="https://shopee.co.th/" target="_blank">Shopee</a>
+
+        <p>Lazada</p>
+        <img src="https://laz-img-cdn.alicdn.com/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png" alt="Lazada Logo">
+        <a href="https://www.lazada.co.th/" target="_blank">Lazada</a>
+
+        <p>Kaidee</p>
+        <img src="https://ast.kaidee.com/blackpearl/_static/images/shared/logos/kaidee.svg" alt="Kaidee Logo">
+        <a href="https://www.kaidee.com/" target="_blank">Kaidee</a>
+    </div>
+</div>
+
+<script>
+    function showContent() {
+        document.getElementById('content').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

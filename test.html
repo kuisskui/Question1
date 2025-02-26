@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>FlixTube: Play video</title>
+
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="flex flex-col">
+    <div class="border-b-2 bg-gray-100">
+        <div class="nav flex flex-row items-center mt-1 p-2">
+            <button onclick="showContent()">Click Me</button>
+            <div id="content">
+                <p>Shopee</p>
+                <img src="https://shopee.co.th/" alt="Sample Image">
+                <a>
+                    https://shopee.co.th/
+                </a>
+
+                <p>Lazada</p>
+                <img src="https://www.lazada.co.th/?spm=a2o4m.officialstores.header.dhome.3d534770r60ByD" alt="Sample Image">
+                <a>
+                    https://pages.lazada.co.th/
+                </a>
+                <p>Kaidee</p>
+                <img src="https://ast.kaidee.com/blackpearl/_static/images/shared/logos/kaidee.svg" alt="Sample Image">
+                <a>
+                    https://www.kaidee.com/
+                </a>
+            </div>
+            <script>
+                function showContent() {
+                    document.getElementById('content').style.display = 'block';
+                }
+            </script>
+            <div class="text-xl font-bold">
+                FlixTube
+            </div>
+            <div class="ml-16">
+                <a href="/">Videos</a>
+            </div>
+            <div class="ml-4">
+                <a href="/upload">Upload</a>
+            </div>
+            <div class="ml-4">
+                <a href="/history">History</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-4">
+    <h1>Playing {{video.metadata.name}}</h1>
+    <div class="m-4">
+        <video controls autoplay muted>
+            <source src={{video.url}} type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+</body>
+</html>

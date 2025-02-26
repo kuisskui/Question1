@@ -19,6 +19,18 @@ async function main() {
     
     app.use(express.static("public"));
 
+    app.get("/advertise", async (req, res) => {
+
+        // Retreives the list of videos from the metadata microservice.
+        // const videosResponse = await axios.get("http://advertise/ads");
+        // console.log(videosResponse.data.test);
+        // console.log(videosResponse.data);
+
+        // Renders the video list for display in the browser.
+        res.render("ads");
+    });
+
+
     //
     // Main web page that lists videos.
     //
